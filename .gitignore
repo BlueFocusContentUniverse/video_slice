@@ -1,21 +1,3 @@
-.vscode
-
-# ignored files
-version.py
-
-# ignored files with suffix
-*.html
-# *.png
-# *.jpeg
-# *.jpg
-# *.gif
-*.pt
-*.pth
-*.dat
-*.zip
-
-# template
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -65,39 +47,8 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-
 # Jupyter Notebook
 .ipynb_checkpoints
-
-# pyenv
-.python-version
-
-# celery beat schedule file
-celerybeat-schedule
-
-# SageMath parsed files
-*.sage.py
 
 # Environments
 .env
@@ -107,6 +58,12 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
 
 # Spyder project settings
 .spyderproject
@@ -118,14 +75,39 @@ venv.bak/
 # mkdocs documentation
 /site
 
-# mypy
+# MyPy
 .mypy_cache/
 
-# project
-experiments_model/
-unreleased/
-results_eval/
-results/
-*debug*
-*old*
-*.sh
+# Project specific
+logs/
+temp/
+output*/
+results*/
+*.log
+*.pt
+*.pth
+*.onnx
+*.pkl
+
+# 特定JSON文件 - 不包括*.example文件
+failed_videos.json
+*_full.txt
+
+# 媒体文件
+*.mp4
+*.jpg
+*.png
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+
+# 配置文件 - 不包括示例文件
+config.yaml
+!config.yaml.example
+
+# Data and model files
+/weights/
+/datasets/
+/inputs/
+/origin_vedio/
